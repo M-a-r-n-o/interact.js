@@ -38,11 +38,7 @@ export default {
     let dx = dx0;
     let dy = dy0;
 
-    if ((originalEdges.left && originalEdges.bottom)
-        || (originalEdges.right && originalEdges.top)) {
-      dy = dx / ratio;
-    }
-    else if (originalEdges.left || originalEdges.right ) { dy = dx / ratio; }
+    if (originalEdges.left || originalEdges.right ) { dy = dx / ratio; }
     else if (originalEdges.top  || originalEdges.bottom) { dx = dy * ratio; }
 
     coords.x = startCoords.x + dx;
