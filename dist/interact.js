@@ -1,5 +1,5 @@
 /**
- * interact.js v1.4.0-alpha.6+sha.bafadcc-dirty
+ * interact.js v1.4.0-alpha.6+sha.7b2299f
  *
  * Copyright (c) 2012-2018 Taye Adeyemi <dev@taye.me>
  * Released under the MIT License.
@@ -5076,9 +5076,7 @@ exports.default = {
     var dx = dx0;
     var dy = dy0;
 
-    if (originalEdges.left && originalEdges.bottom || originalEdges.right && originalEdges.top) {
-      dy = dx / ratio;
-    } else if (originalEdges.left || originalEdges.right) {
+    if (originalEdges.left || originalEdges.right) {
       dy = dx / ratio;
     } else if (originalEdges.top || originalEdges.bottom) {
       dx = dy * ratio;
